@@ -3,9 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Бобёр чертовски хорошо звучит</title>
-
-
-    <!-- STYLE -->
     <style>
     /* [Master Stylesheet v-1.0.0] */
     /* :: :: 1.0 Import Fonts */
@@ -78,7 +75,7 @@
 
     img {
       height: auto;
-      max-width: 100%; }
+      max-width: 205px; }
 
     /* Spacing */
     .mt-15 {
@@ -1407,12 +1404,7 @@
     /* ##### The End ##### */
 
     /*# sourceMappingURL=core-style.css.map */
-
-
     </style>
-
-
-
   </head>
   <body>
     <div class="search-wrapper section-padding-100">
@@ -1425,7 +1417,7 @@
                     <div class="search-content">
                         <form action="#" method="get">
                             <input type="search" name="search" id="search" placeholder="Type your keyword...">
-                            <button type="submit"><img src="img/core-img/search.png" alt=""></button>
+                            <button type="submit"><img src="https://sun9-26.userapi.com/c857636/v857636045/1bd08a/Qjio1hnGLlw.jpg" alt=""></button>
                         </form>
                     </div>
                 </div>
@@ -1471,13 +1463,14 @@
             </nav>
             <!-- Button Group -->
             <div class="amado-btn-group mt-30 mb-100">
-                <a href="#" class="btn amado-btn mb-15">%Discount%</a>
+                <a href="#" class="btn amado-btn mb-15">% Discount %</a>
+                <a href="#" class="btn amado-btn active">New this week</a>
             </div>
             <!-- Cart Menu -->
             <div class="cart-fav-search mb-100">
-                <a href="cart.html" class="cart-nav"><img src="img/core-img/cart.png" alt=""> Cart <span>(0)</span></a>
-                <a href="#" class="fav-nav"><img src="img/core-img/favorites.png" alt=""> Favourite</a>
-                <a href="#" class="search-nav"><img src="img/core-img/search.png" alt=""> Search</a>
+                <a href="cart.html" class="cart-nav"><img src="https://sun9-40.userapi.com/c857636/v857636045/1bd091/QRA00czx00Q.jpg" alt=""> Cart <span>(0)</span></a>
+                <a href="#" class="fav-nav"><img src="https://sun9-52.userapi.com/c857636/v857636045/1bd098/acBBh267cy0.jpg" alt=""> Favourite</a>
+                <a href="#" class="search-nav"><img src="https://sun9-26.userapi.com/c857636/v857636045/1bd08a/Qjio1hnGLlw.jpg" alt=""> Search</a>
             </div>
             <!-- Social Button -->
             <div class="social-info d-flex justify-content-between">
@@ -1496,10 +1489,8 @@
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="shop.html">
-                        <img src="img/bg-img/1.jpg" alt="">
-                        <!-- Hover Content -->
+
                         <div class="hover-content">
-                            <div class="line"></div>
                             <p>From $180</p>
                             <h4>Modern Chair</h4>
                         </div>
@@ -1509,46 +1500,8 @@
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="shop.html">
-                        <img src="img/bg-img/2.jpg" alt="">
-                        <!-- Hover Content -->
-                        <div class="hover-content">
-                            <div class="line"></div>
-                            <p>From $180</p>
-                            <h4>Minimalistic Plant Pot</h4>
-                        </div>
-                    </a>
-                </div>
+                        <img src="https://simg2.marwin.kz/media/catalog/product/cache/69236b3c6fe5a36c2425d919ec770b32/c/o/cover1_55_92.jpg" alt="">
 
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
-                    <a href="shop.html">
-                        <img src="img/bg-img/3.jpg" alt="">
-                        <!-- Hover Content -->
-                        <div class="hover-content">
-                            <div class="line"></div>
-                            <p>From $180</p>
-                            <h4>Modern Chair</h4>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
-                    <a href="shop.html">
-                        <img src="img/bg-img/4.jpg" alt="">
-                        <!-- Hover Content -->
-                        <div class="hover-content">
-                            <div class="line"></div>
-                            <p>From $180</p>
-                            <h4>Night Stand</h4>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
-                    <a href="shop.html">
-                        <img src="img/bg-img/5.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -1561,7 +1514,9 @@
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="shop.html">
-                        <img src="img/bg-img/6.jpg" alt="">
+
+                        <img src="https://simg2.marwin.kz/media/catalog/product/cache/69236b3c6fe5a36c2425d919ec770b32/_/a/_a54817d481539d36ba4c9f48907f39bff0c41a60b7876926a0_pimgpsh_fullsize_distr.jpg" alt="">
+
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -1574,7 +1529,9 @@
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="shop.html">
-                        <img src="img/bg-img/7.jpg" alt="">
+
+                        <img src="https://simg2.marwin.kz/media/catalog/product/cache/69236b3c6fe5a36c2425d919ec770b32/1/0/1018520_0.jpg" alt="">
+
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -1587,7 +1544,9 @@
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="shop.html">
-                        <img src="img/bg-img/8.jpg" alt="">
+
+                        <img src="https://simg2.marwin.kz/media/catalog/product/cache/69236b3c6fe5a36c2425d919ec770b32/migrated/article/14883/8_tn3.jpg" alt="">
+
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -1600,7 +1559,9 @@
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="shop.html">
-                        <img src="img/bg-img/9.jpg" alt="">
+
+                        <img src="https://simg2.marwin.kz/media/catalog/product/cache/69236b3c6fe5a36c2425d919ec770b32/migrated/article/22477/58_tn3.jpg" alt="">
+
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -1653,8 +1614,7 @@
                         </div>
                         <!-- Copywrite Text -->
                         <p class="copywrite"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+
                     </div>
                 </div>
                 <!-- Single Widget Area -->
@@ -1692,4 +1652,6 @@
     </footer>
 
 </body>
+
+
 </body>
