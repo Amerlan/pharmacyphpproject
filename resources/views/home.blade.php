@@ -1,15 +1,15 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <body>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Бобёр чертовски хорошо звучит</title>
   </head>
   <body>
     <header>
 
       <header>
     <div>
-      <a href="file:///C:/xampp/htdocs/bober/boburn/pharmacyphpproject/resources/views/amado/index.html"> link </a>
+      <img src="https://pbs.twimg.com/media/EUYl8W1WoAEecHG?format=jpg&name=small">
     </div>
 </body>
 </body>
