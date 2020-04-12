@@ -1,8 +1,20 @@
 <!DOCTYPE html>
-<body>
-  <head>
-    <meta charset="utf-8">
-    <title>Бобёр чертовски хорошо звучит</title>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title> Бобёр не склоняется | Shop</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Style CSS -->
 
     <style>
 
@@ -1821,8 +1833,11 @@
 
     </style>
 
-  </head>
-  <body>
+
+</head>
+
+<body>
+    <!-- Search Wrapper Area Start -->
     <div class="search-wrapper section-padding-100">
         <div class="search-close">
             <i class="fa fa-close" aria-hidden="true"></i>
@@ -1832,7 +1847,7 @@
                 <div class="col-12">
                     <div class="search-content">
                         <form action="#" method="get">
-                            <input type="search" name="search" id="search" placeholder="Type your keyword...">
+                            <input type="search" name="seArch" id="search" placeholder="Type your keyword...">
                             <button type="submit"><img src="https://sun9-26.userapi.com/c857636/v857636045/1bd08a/Qjio1hnGLlw.jpg" alt=""></button>
                         </form>
                     </div>
@@ -1870,8 +1885,8 @@
             <!-- Amado Nav -->
             <nav class="amado-nav">
                 <ul>
-                    <li class="active"><a href="home">Home</a></li>
-                    <li><a href="shop">Shop</a></li>
+                    <li><a href="home">Home</a></li>
+                    <li class="active"><a href="shop">Shop</a></li>
                     <li><a href="product_details">Product</a></li>
                     <li><a href="cart">Cart</a></li>
                     <li><a href="checkout">Checkout</a></li>
@@ -1879,116 +1894,365 @@
             </nav>
             <!-- Button Group -->
             <div class="amado-btn-group mt-30 mb-100">
-                <a href="#" class="btn amado-btn mb-15">% Discount %</a>
+                <a href="#" class="btn amado-btn mb-15">%Discount%</a>
                 <a href="#" class="btn amado-btn active">New this week</a>
             </div>
             <!-- Cart Menu -->
             <div class="cart-fav-search mb-100">
-                <a href="cart" class="cart-nav"><img src="https://sun9-40.userapi.com/c857636/v857636045/1bd091/QRA00czx00Q.jpg" alt=""> Cart <span>(0)</span></a>
+                <a href="#" class="cart-nav"><img src="https://sun9-40.userapi.com/c857636/v857636045/1bd091/QRA00czx00Q.jpg" alt=""> Cart <span>(0)</span></a>
                 <a href="#" class="fav-nav"><img src="https://sun9-52.userapi.com/c857636/v857636045/1bd098/acBBh267cy0.jpg" alt=""> Favourite</a>
                 <a href="#" class="search-nav"><img src="https://sun9-26.userapi.com/c857636/v857636045/1bd08a/Qjio1hnGLlw.jpg" alt=""> Search</a>
             </div>
             <!-- Social Button -->
             <div class="social-info d-flex justify-content-between">
                 <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="www.instagram.com/imdood13z"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
             </div>
         </header>
         <!-- Header Area End -->
 
-        <!-- Product Catagories Area Start -->
-        <div class="products-catagories-area clearfix">
-            <div class="amado-pro-catagory clearfix">
+        <div class="shop_sidebar_area">
 
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
-                    <a href="shop">
+            <!-- ##### Single Widget ##### -->
+            <div class="widget catagory mb-50">
+                <!-- Widget Title -->
+                <h6 class="widget-title mb-30">Genres</h6>
 
-                        <div class="hover-content">
-                            <p>From $180</p>
-                            <h4>Modern Chair</h4>
+                <!--  Catagories  -->
+                <div class="catagories-menu">
+                    <ul>
+                        <li class="active"><a href="#">Science fiction</a></li>
+                        <li><a href="#">Classic</a></li>
+                        <li><a href="#">Fiction</a></li>
+                        <li><a href="#">Non-fiction</a></li>
+                        <li><a href="#">Drama</a></li>
+                        <li><a href="#">Romane</a></li>
+                        <li><a href="#">Fantasy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ##### Single Widget ##### -->
+            <div class="widget brands mb-50">
+                <!-- Widget Title -->
+                <h6 class="widget-title mb-30">Publishing houses</h6>
+
+                <div class="widget-desc">
+                    <!-- Single Form Check -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="amado">
+                        <label class="form-check-label" for="amado">Azbooka</label>
+                    </div>
+                    <!-- Single Form Check -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="ikea">
+                        <label class="form-check-label" for="ikea">AST</label>
+                    </div>
+                    <!-- Single Form Check -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="furniture">
+                        <label class="form-check-label" for="furniture">Atamoora</label>
+                    </div>
+                    <!-- Single Form Check -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="factory">
+                        <label class="form-check-label" for="factory">Pyrokinesis</label>
+                    </div>
+                    <!-- Single Form Check -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="artdeco">
+                        <label class="form-check-label" for="artdeco">Loqiemean</label>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="amado_product_area section-padding-100">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="product-topbar d-xl-flex align-items-end justify-content-between">
+                            <!-- Total Products -->
+                            <div class="total-products">
+                                <p>Showing 1-8 0f 25</p>
+                                <div class="view d-flex">
+                                    <a href="#"><i class="fa fa-th-large" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <!-- Sorting -->
+                            <div class="product-sorting d-flex">
+                                <div class="sort-by-date d-flex align-items-center mr-15">
+                                    <p>Sort by</p>
+                                    <form action="#" method="get">
+                                        <select name="select" id="sortBydate">
+                                            <option value="value">Date</option>
+                                            <option value="value">Newest</option>
+                                            <option value="value">Popular</option>
+                                        </select>
+                                    </form>
+                                </div>
+                                <div class="view-product d-flex align-items-center">
+                                    <p>View</p>
+                                    <form action="#" method="get">
+                                        <select name="select" id="viewProduct">
+                                            <option value="value">12</option>
+                                            <option value="value">24</option>
+                                            <option value="value">48</option>
+                                            <option value="value">96</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
-                    <a href="shop">
-                        <img src="https://simg2.marwin.kz/media/catalog/product/cache/69236b3c6fe5a36c2425d919ec770b32/c/o/cover1_55_92.jpg" height = "150px" width = "150px" alt="">
+                <div class="row">
 
-                        <!-- Hover Content -->
-                        <div class="hover-content">
-                            <div class="line"></div>
-                            <p>From $18</p>
-                            <h4>Plant Pot</h4>
+                    <!-- Single Product Area -->
+                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                        <div class="single-product-wrapper">
+                            <!-- Product Image -->
+                            <div class="product-img">
+                                <img src="https://sun9-56.userapi.com/c855724/v855724156/21e475/8D5ps8FALgk.jpg" alt="">
+                                <!-- Hover Thumb -->
+                                <img class="hover-img" src="https://sun9-7.userapi.com/c858528/v858528837/151ee4/we_HDzzGq_k.jpg" alt="">
+                            </div>
+
+                            <!-- Product Description -->
+                            <div class="product-description d-flex align-items-center justify-content-between">
+                                <!-- Product Meta Data -->
+                                <div class="product-meta-data">
+                                    <div class="line"></div>
+                                    <p class="product-price">$180</p>
+                                    <a href="#">
+                                        <h6>Modern Chair</h6>
+                                    </a>
+                                </div>
+                                <!-- Ratings & Cart -->
+                                <div class="ratings-cart text-right">
+                                    <div class="ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="cart">
+                                        <a href="cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </a>
+                    </div>
+
+                    <!-- Single Product Area -->
+                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                        <div class="single-product-wrapper">
+                            <!-- Product Image -->
+                            <div class="product-img">
+                                <img src="https://sun9-7.userapi.com/c858528/v858528837/151ee4/we_HDzzGq_k.jpg" alt="">
+                                <!-- Hover Thumb -->
+                                <img class="hover-img" src="https://sun9-22.userapi.com/c855724/v855724156/21e47d/3LuKmtenp8o.jpg" alt="">
+                            </div>
+
+                            <!-- Product Description -->
+                            <div class="product-description d-flex align-items-center justify-content-between">
+                                <!-- Product Meta Data -->
+                                <div class="product-meta-data">
+                                    <div class="line"></div>
+                                    <p class="product-price">$180</p>
+                                    <a href="#">
+                                        <h6>Modern Chair</h6>
+                                    </a>
+                                </div>
+                                <!-- Ratings & Cart -->
+                                <div class="ratings-cart text-right">
+                                    <div class="ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="cart">
+                                        <a href="cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Product Area -->
+                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                        <div class="single-product-wrapper">
+                            <!-- Product Image -->
+                            <div class="product-img">
+                                <img src="https://sun9-22.userapi.com/c855724/v855724156/21e47d/3LuKmtenp8o.jpg" alt="">
+                                <!-- Hover Thumb -->
+                                <img class="hover-img" src="https://sun9-19.userapi.com/c855724/v855724156/21e485/IyXQiTpxxlg.jpg" alt="">
+                            </div>
+
+                            <!-- Product Description -->
+                            <div class="product-description d-flex align-items-center justify-content-between">
+                                <!-- Product Meta Data -->
+                                <div class="product-meta-data">
+                                    <div class="line"></div>
+                                    <p class="product-price">$180</p>
+                                    <a href="#">
+                                        <h6>Modern Chair</h6>
+                                    </a>
+                                </div>
+                                <!-- Ratings & Cart -->
+                                <div class="ratings-cart text-right">
+                                    <div class="ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="cart">
+                                        <a href="cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Product Area -->
+                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                        <div class="single-product-wrapper">
+                            <!-- Product Image -->
+                            <div class="product-img">
+                                <img src="https://sun9-19.userapi.com/c855724/v855724156/21e485/IyXQiTpxxlg.jpg" alt="">
+                                <!-- Hover Thumb -->
+                                <img class="hover-img" src="https://sun9-14.userapi.com/c855724/v855724156/21e48d/Q74xxEvJ1zk.jpg" alt="">
+                            </div>
+
+                            <!-- Product Description -->
+                            <div class="product-description d-flex align-items-center justify-content-between">
+                                <!-- Product Meta Data -->
+                                <div class="product-meta-data">
+                                    <div class="line"></div>
+                                    <p class="product-price">$180</p>
+                                    <a href="#">
+                                        <h6>Modern Chair</h6>
+                                    </a>
+                                </div>
+                                <!-- Ratings & Cart -->
+                                <div class="ratings-cart text-right">
+                                    <div class="ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="cart">
+                                        <a href="cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Product Area -->
+                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                        <div class="single-product-wrapper">
+                            <!-- Product Image -->
+                            <div class="product-img">
+                                <img src="https://sun9-14.userapi.com/c855724/v855724156/21e48d/Q74xxEvJ1zk.jpg" alt="">
+                                <!-- Hover Thumb -->
+                                <img class="hover-img" src="https://sun9-5.userapi.com/c855724/v855724156/21e49d/yZ7ex0EDHDw.jpg" alt="">
+                            </div>
+
+                            <!-- Product Description -->
+                            <div class="product-description d-flex align-items-center justify-content-between">
+                                <!-- Product Meta Data -->
+                                <div class="product-meta-data">
+                                    <div class="line"></div>
+                                    <p class="product-price">$180</p>
+                                    <a href="#">
+                                        <h6>Modern Chair</h6>
+                                    </a>
+                                </div>
+                                <!-- Ratings & Cart -->
+                                <div class="ratings-cart text-right">
+                                    <div class="ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="cart">
+                                        <a href="cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Product Area -->
+                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                        <div class="single-product-wrapper">
+                            <!-- Product Image -->
+                            <div class="product-img">
+                                <img src="https://sun9-5.userapi.com/c855724/v855724156/21e49d/yZ7ex0EDHDw.jpg" alt="">
+                                <!-- Hover Thumb -->
+                                <img class="hover-img" src="https://sun9-27.userapi.com/c855724/v855724156/21e4a5/NFjebWa6UG4.jpg" alt="">
+                            </div>
+
+                            <!-- Product Description -->
+                            <div class="product-description d-flex align-items-center justify-content-between">
+                                <!-- Product Meta Data -->
+                                <div class="product-meta-data">
+                                    <div class="line"></div>
+                                    <p class="product-price">$180</p>
+                                    <a href="#">
+                                        <h6>Modern Chair</h6>
+                                    </a>
+                                </div>
+                                <!-- Ratings & Cart -->
+                                <div class="ratings-cart text-right">
+                                    <div class="ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="cart">
+                                        <a href="cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
-                    <a href="shop">
-
-                        <img src="https://simg2.marwin.kz/media/catalog/product/cache/69236b3c6fe5a36c2425d919ec770b32/_/a/_a54817d481539d36ba4c9f48907f39bff0c41a60b7876926a0_pimgpsh_fullsize_distr.jpg" alt="">
-
-                        <!-- Hover Content -->
-                        <div class="hover-content">
-                            <div class="line"></div>
-                            <p>From $320</p>
-                            <h4>Small Table</h4>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
-                    <a href="shop">
-
-                        <img src="https://simg2.marwin.kz/media/catalog/product/cache/69236b3c6fe5a36c2425d919ec770b32/1/0/1018520_0.jpg" alt="">
-
-                        <!-- Hover Content -->
-                        <div class="hover-content">
-                            <div class="line"></div>
-                            <p>From $318</p>
-                            <h4>Metallic Chair</h4>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
-                    <a href="shop">
-
-                        <img src="https://simg2.marwin.kz/media/catalog/product/cache/69236b3c6fe5a36c2425d919ec770b32/migrated/article/14883/8_tn3.jpg" alt="">
-
-                        <!-- Hover Content -->
-                        <div class="hover-content">
-                            <div class="line"></div>
-                            <p>From $318</p>
-                            <h4>Modern Rocking Chair</h4>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
-                    <a href="shop">
-
-                        <img src="https://simg2.marwin.kz/media/catalog/product/cache/69236b3c6fe5a36c2425d919ec770b32/migrated/article/22477/58_tn3.jpg" alt="">
-
-                        <!-- Hover Content -->
-                        <div class="hover-content">
-                            <div class="line"></div>
-                            <p>From $318</p>
-                            <h4>Home Deco</h4>
-                        </div>
-                    </a>
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Pagination -->
+                        <nav aria-label="navigation">
+                            <ul class="pagination justify-content-end mt-50">
+                                <li class="page-item active"><a class="page-link" href="#">01.</a></li>
+                                <li class="page-item"><a class="page-link" href="#">02.</a></li>
+                                <li class="page-item"><a class="page-link" href="#">03.</a></li>
+                                <li class="page-item"><a class="page-link" href="#">04.</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Product Catagories Area End -->
     </div>
     <!-- ##### Main Content Wrapper End ##### -->
 
@@ -2030,7 +2294,8 @@
                         </div>
                         <!-- Copywrite Text -->
                         <p class="copywrite"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </div>
                 </div>
                 <!-- Single Widget Area -->
@@ -2066,8 +2331,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
-
-</body>
+</html>
