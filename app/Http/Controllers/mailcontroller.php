@@ -21,6 +21,9 @@ class mailcontroller extends Controller
                               //переменную и отправляем её в discountsender (это mail class, в видосе говорится как создать)
                               // mail class находятся в app\mail
     Mail::to($email)->send(new discountsender($email));
+    return view('home');
+    // После отправки сбщ не удивляйтесь, редайрект опять будет на хом пейдж
+
   }
 
 }

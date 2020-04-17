@@ -147,9 +147,7 @@
             </div>
         </div>
     </section>
-    <!-- ##### Newsletter Area End ##### -->
-
-@include('layouts.footer')
+  @include('layouts.footer')
 
 </body>
 

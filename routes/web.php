@@ -23,4 +23,3 @@ Route::post('/senddiscount', "mailcontroller@discount"); // тут рабочи�
 Route::get('/form', function (){return view('form');});  // это была форма для проверки отправки письма, она робит, но пока юзлес
 Route::get('add',"bookaddcontroller@index");
 Route::post('submitbook',"bookaddcontroller@store");   // Про что я говорил. Роут тут POST а не GET
-Route::redirect('/senddiscount', "/home");      // После отправки сбщ не удивляйтесь, редайрект опять будет на хом пейдж
