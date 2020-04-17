@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Bookprev extends Migration
+class CreateLoginsystemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Bookprev extends Migration
      */
     public function up()
     {
-        Schema::create('bookpreview', function (Blueprint $table) {
+        Schema::create('loginsystems', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class Bookprev extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bookpreview');
+        Schema::dropIfExists('loginsystems');
     }
 }
