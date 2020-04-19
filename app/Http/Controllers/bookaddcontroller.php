@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\bookinfo;
+use App\books;
 class bookaddcontroller extends Controller
 {
     /**
@@ -41,12 +41,14 @@ class bookaddcontroller extends Controller
       'url'=>'required',
       'price'=>'required',
     ]);
-    $books = new bookinfo;
+    $books = new books;
     $books->title = $request->title;
     $books->author = $request->author;
     $books->url = $request->url;
+    $books->url2 = $request->url2;
     $books->price = $request->price;
     $books->save();
+    return redirect('shop');
 
     }
 

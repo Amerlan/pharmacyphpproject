@@ -21,5 +21,5 @@ Route::get('/shop', "ShopController@index");
 Route::post('/send', "mailcontroller@send");  // это не подключено, было создано для тестировки
 Route::post('/senddiscount', "mailcontroller@discount"); // тут рабочий вариант отправки письма. Обрати внимания что он POST.
 Route::get('/form', function (){return view('form');});  // это была форма для проверки отправки письма, она робит, но пока юзлес
-Route::get('add',"bookaddcontroller@index");
-Route::post('submitbook',"bookaddcontroller@store");   // Про что я говорил. Роут тут POST а не GET
+Route::get('/add',"bookaddcontroller@index");
+Route::post('/store',"bookaddcontroller@store");   // Про что я говорил. Роут тут POST а не GET
