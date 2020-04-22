@@ -1,4 +1,26 @@
 <!-- ##### Footer Area Start ##### -->
+<section class="newsletter-area section-padding-100-0">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Newsletter Text -->
+            <div class="col-12 col-lg-6 col-xl-7">
+                <div class="newsletter-text mb-100">
+                    <h2>Subscribe for a <span>25% Discount</span></h2>
+                    <p>Do you want to take discount? Subsribe for us. We will not annoy you with a lot of messages.</p>
+                </div>
+            </div>
+            <!-- Newsletter Form -->
+            <div class="col-12 col-lg-6 col-xl-5" id = 'discount'>
+                <div class="newsletter-form mb-100">
+                  {!! Form::open(['url' => 'senddiscount']) !!}  <!--тут мы переходим на senddiscount ссылку при нажатии сабмит-->
+                  {{Form::text('email')}}
+                  {{Form::submit('submit')}}
+                  {!! Form::close() !!}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <footer class="footer_area clearfix">
     <div class="container">
         <div class="row align-items-center">

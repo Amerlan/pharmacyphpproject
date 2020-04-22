@@ -13,7 +13,8 @@ class ShopController extends Controller
      */
     public function index()
     {
-        $data = books::all();
+        $data = books::paginate(5);
+
         return view('/shop',compact('data'));
     }
 
