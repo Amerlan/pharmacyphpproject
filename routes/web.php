@@ -28,6 +28,10 @@ Route::get('add_to_cart/{id}', [
   'uses' => 'ShopController@addToCart',
   'as' => 'product.add'
 ]);
+Route::get('delete_from_cart/{id}', [
+  'uses' => 'ShopController@delete',
+  'as' => 'product.delete'
+]);
 
 Route::get('cart', [
   'uses' => 'ShopController@getCart',

@@ -90,6 +90,16 @@ class ShopController extends Controller
       $request->session()->put('cart',$cart);
       return redirect()->back();
     }
+    public function delete(Request $request, $id)
+    {
+      $item = books::find($id);
+      $oldcart = Session::has('cart') ? Session::get('cart') : null;
+      $cart = new cart($oldcart);
+      $cart->delete($item, $item->id);
+
+      $request->session()->put('cart',$cart);
+      return redirect()->back();
+    }
 
 
     public function getCart()

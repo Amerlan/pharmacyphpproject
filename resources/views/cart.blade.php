@@ -40,6 +40,9 @@
                                         <div class="qty-btn d-flex">
                                             <p>{{ $elem['qty'] }} <span>({{$elem['item']->price}}$ per item)</span></p>
                                         </div>
+                                        <div>
+                                          <a href = '{{ route('product.delete',['id' => $elem['item'] ->id] )}}'> - </a>
+                                        </div>
                                     </td>
                                 </tr>
                                 @endforeach
