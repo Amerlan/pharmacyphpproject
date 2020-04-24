@@ -1,6 +1,5 @@
 <?php
 $temp = explode(", ",strval($response));
-$region_address = $temp[0].' ,'.$temp[1].' city';
  ?>
 @extends('layouts.app')
 @section('content')
@@ -20,7 +19,7 @@ $region_address = $temp[0].' ,'.$temp[1].' city';
                         </div>
                         <P>Dear {{$data['fname']}}! Thank You for choosing our website. Your order number is {{$data['id']}}.</p>
                         <p> Shipping info </p>
-                        <p>To: {{$region_address}}, {{$data['address']}} street.</p>
+                        <p>To: {{$temp[0]}}, {{$data['address']}} street.</p>
 
                         <p></p>
                     </div>
@@ -37,5 +36,6 @@ $region_address = $temp[0].' ,'.$temp[1].' city';
             </div>
         </div>
     </div>
+  </div>
 @include('layouts.footer')
 @endsection

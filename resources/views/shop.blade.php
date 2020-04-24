@@ -37,7 +37,7 @@
                             <div class="product-img">
                                 <img src={{$elem->url}} alt="">
                                 <!-- Hover Thumb -->
-                                <img class="hover-img" src={{$elem->url2}} alt="">
+                                <img class="hover-img" src={{$elem->url}} alt="">
                             </div>
 
                             <!-- Product Description -->

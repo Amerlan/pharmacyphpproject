@@ -47,7 +47,6 @@ class ShopController extends Controller
           $info = 'Post code error';
         }
 
-        $info = $response->json()['data'][0]['address'];
         $order = new orders;
 
         $oldcart = Session::get('cart');

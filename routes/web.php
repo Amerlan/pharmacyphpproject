@@ -54,6 +54,9 @@ Route::group(['middleware' => ['auth', 'customer'] ],
 function()
 {
   Route::post('/senddiscount', "mailcontroller@discount");
-  Route::get('/success', function (){return view('success');});
+  Route::get('/success', function ()
+  {
+    return view('success');
+  });
 
 });

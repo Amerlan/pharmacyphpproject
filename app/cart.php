@@ -48,14 +48,7 @@
         if ($storeditem['qty'] == 0){
           unset($this->items[$id]);
         }
+
     }
   }
-
-
-
-
-
-
-
-
  ?>

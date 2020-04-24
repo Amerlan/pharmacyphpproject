@@ -41,7 +41,7 @@
                                             <p>{{ $elem['qty'] }} <span>({{$elem['item']->price}}$ per item)</span></p>
                                         </div>
                                         <div>
-                                          <a href = '{{ route('product.delete',['id' => $elem['item'] ->id] )}}'> - </a>
+                                          <a href = '{{ route('product.delete',['id' => $elem['item'] ->id] )}}'> Delete </a>
                                         </div>
                                     </td>
                                 </tr>
