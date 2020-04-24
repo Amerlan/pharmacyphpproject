@@ -12,6 +12,9 @@
         <ul>
             <li><a href="home">Home</a></li>
             <li><a href="shop">Shop</a></li>
+            @if (Auth::user()->role['slug']=='admin')
+            <li><a href="add">Add items</a></li>
+            @endif
             <li><a href={{ route('product.shoppingcart') }}>Cart</a></li>
             <li><a href="checkout">Checkout</a></li>
         </ul>

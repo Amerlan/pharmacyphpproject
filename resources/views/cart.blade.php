@@ -24,10 +24,11 @@
                                 </tr>
                             </thead>
                             <tbody>
+                              @if($products)
                               @foreach ($products as $elem)
                                 <tr>
                                     <td class="cart_product_img">
-                                        <img src={{ $elem['item']->url }} alt="Product">
+                                        <img src={{ $elem['item']->url}} width="100" height="100" alt="Product">
                                     </td>
                                     <td class="cart_product_desc">
                                         <h5>{{$elem['item']->title}}</h5>
@@ -42,7 +43,9 @@
                                     </td>
                                 </tr>
                                 @endforeach
-
+                                @else
+                                <h3>You didn't add anything. Go to <a href= 'shop'> <h3>shop</h3></a></h3>
+                                @endif
                             </tbody>
                         </table>
                     </div>
@@ -51,7 +54,7 @@
                     <div class="cart-summary">
                         <h5>Cart Total</h5>
                         <ul class="summary-table">
-                            <li><span>total:</span> <span>{{$totalprice}}</span></li>
+                            <li><span>total:</span> <span>{{$totalprice ?? 0}}</span></li>
                         </ul>
                         <div class="cart-btn mt-100">
                             <a href='checkout' class="btn amado-btn w-100">Checkout</a>

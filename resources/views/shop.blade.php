@@ -13,10 +13,15 @@
                     <div class="col-12">
                         <div class="product-topbar d-xl-flex align-items-end justify-content-between">
                             <!-- Total Products -->
+                            @if (count($data)>0)
                             <div class="total-products">
                                 <p>Showing {{$data[0]->id}}-{{$data[0]->id + count($data) - 1}}</p>
-
                             </div>
+                            @else
+                            <div class="total-products">
+                                <p>Showing 0 out of 0</p>
+                            </div>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -24,6 +29,7 @@
                 <div class="row">
 
                     <!-- Single Product Area -->
+                    @if (count($data) > 0)
                     @foreach ($data as $elem)
                     <div class="col-12 col-sm-6 col-md-12 col-xl-6">
                         <div class="single-product-wrapper">
@@ -54,6 +60,12 @@
                         </div>
                     </div>
 @endforeach
+@else
+<div class="total-products">
+    <h3>Shop is empty. Sorry.</h3>
+
+</div>
+@endif
                 </div>
 
                 <div class="row">

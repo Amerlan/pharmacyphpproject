@@ -1,5 +1,5 @@
 <?php
-
+use GuzzleHttp\Client;
 namespace App\Http\Controllers;
 use App\books;
 use App\cart;
@@ -7,6 +7,9 @@ use App\orders;
 use Illuminate\Http\Request;
 use Session;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
+
+
 
 class ShopController extends Controller
 {
@@ -36,19 +39,34 @@ class ShopController extends Controller
 
     public function placeOrder(Request $request)
     {
+        $url = "https://api.post.kz/api/byOldPostcode/".strval($request->postcode)."?from=0";
+        $response = Http::get($url);
+        try {
+            $info = $response->json()['data'][0]['address'];
+        } catch (\Exception $e) {
+          $info = 'Post code error';
+        }
+
+        $info = $response->json()['data'][0]['address'];
         $order = new orders;
 
+        $oldcart = Session::get('cart');
+        $cart = new cart($oldcart);
+
         $order->customer_id = Auth::user()->id;
-        $order->fname = $request->title;
-        $order->lname = $request->title;
-        $order->email = $request->Auth::user()->email;
+        $order->fname = $request->fname;
+        $order->lname = $request->lname;
+        $order->email = Auth::user()->email;
         $order->address = $request->address;
         $order->postcode = $request->postcode;
+        $order->bill = $cart->totalprice;
         $order->phone_number = $request->phone_number;
         $order->comment = $request->comment;
 
         $order->save();
-        return view('confirm');
+        $data = orders::where('customer_id', Auth::user()->id)->orderBy('id', 'desc')->first();
+        Session::forget('cart');
+        return view('/confirm', ['data'=>$data, 'response'=>$info]);
     }
 
     public function edit($id)

@@ -38,7 +38,6 @@ class bookaddcontroller extends Controller
     $books->title = $request->title;
     $books->author = $request->author;
     $books->url = $request->url;
-    $books->url2 = $request->url2;
     $books->price = $request->price;
     $books->save();
     return redirect('shop');

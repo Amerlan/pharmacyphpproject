@@ -17,6 +17,7 @@ class CreateOrdersTable extends Migration
             $table->string('email');
             $table->string('address');
             $table->string('postcode');
+            $table->integer('bill');
             $table->string('phone_number');
             $table->string('comment');
             $table->timestamps();
