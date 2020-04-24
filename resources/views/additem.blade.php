@@ -15,7 +15,6 @@
   {{Form::text('author')}}
   <br><br>
   {{Form::text('url')}}
-  {{Form::text('url2')}}
 </div>
 <div class="form-group">
 <label for="exampleInputPassword1">Price</label>

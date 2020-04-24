@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-@extends('layouts.style')
+    @extends('layouts.style')
     <title>{{ config('app.name', 'ReadHome') }}</title>
 
     <!-- Scripts -->

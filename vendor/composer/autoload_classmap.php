@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Cart' => $baseDir . '/app/cart.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Auth\\ChangePasswordController' => $baseDir . '/app/Http/Controllers/Auth/ChangePasswordController.php',
@@ -21,8 +22,10 @@ return array(
     'App\\Http\\Controllers\\bookaddcontroller' => $baseDir . '/app/Http/Controllers/bookaddcontroller.php',
     'App\\Http\\Controllers\\mailcontroller' => $baseDir . '/app/Http/Controllers/mailcontroller.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
+    'App\\Http\\Middleware\\AdminMiddleware' => $baseDir . '/app/Http/Middleware/AdminMiddleware.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
+    'App\\Http\\Middleware\\CustomerMiddleware' => $baseDir . '/app/Http/Middleware/CustomerMiddleware.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
     'App\\Http\\Middleware\\RedirectIfAuthenticated' => $baseDir . '/app/Http/Middleware/RedirectIfAuthenticated.php',
     'App\\Http\\Middleware\\TrimStrings' => $baseDir . '/app/Http/Middleware/TrimStrings.php',
@@ -38,7 +41,7 @@ return array(
     'App\\Role' => $baseDir . '/app/Role.php',
     'App\\User' => $baseDir . '/app/User.php',
     'App\\books' => $baseDir . '/app/books.php',
-    'App\\loginsystem' => $baseDir . '/app/loginsystem.php',
+    'App\\orders' => $baseDir . '/app/orders.php',
     'App\\subscriptionlist' => $baseDir . '/app/subscriptionlist.php',
     'Asm89\\Stack\\Cors' => $vendorDir . '/asm89/stack-cors/src/Asm89/Stack/Cors.php',
     'Asm89\\Stack\\CorsService' => $vendorDir . '/asm89/stack-cors/src/Asm89/Stack/CorsService.php',

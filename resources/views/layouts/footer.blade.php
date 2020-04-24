@@ -52,9 +52,6 @@
                                         <a class="nav-link" href="shop">Shop</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="product_details">Product</a>
-                                    </li>
-                                    <li class="nav-item">
                                         <a class="nav-link" href="cart">Cart</a>
                                     </li>
                                     <li class="nav-item">

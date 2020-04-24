@@ -484,6 +484,7 @@ class ComposerStaticInit350a14a752e373f08aec310a4ee9826f
     );
 
     public static $classMap = array (
+        'App\\Cart' => __DIR__ . '/../..' . '/app/cart.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Auth\\ChangePasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ChangePasswordController.php',
@@ -499,8 +500,10 @@ class ComposerStaticInit350a14a752e373f08aec310a4ee9826f
         'App\\Http\\Controllers\\bookaddcontroller' => __DIR__ . '/../..' . '/app/Http/Controllers/bookaddcontroller.php',
         'App\\Http\\Controllers\\mailcontroller' => __DIR__ . '/../..' . '/app/Http/Controllers/mailcontroller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
+        'App\\Http\\Middleware\\AdminMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/AdminMiddleware.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
+        'App\\Http\\Middleware\\CustomerMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/CustomerMiddleware.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
@@ -516,7 +519,7 @@ class ComposerStaticInit350a14a752e373f08aec310a4ee9826f
         'App\\Role' => __DIR__ . '/../..' . '/app/Role.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\books' => __DIR__ . '/../..' . '/app/books.php',
-        'App\\loginsystem' => __DIR__ . '/../..' . '/app/loginsystem.php',
+        'App\\orders' => __DIR__ . '/../..' . '/app/orders.php',
         'App\\subscriptionlist' => __DIR__ . '/../..' . '/app/subscriptionlist.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack/CorsService.php',

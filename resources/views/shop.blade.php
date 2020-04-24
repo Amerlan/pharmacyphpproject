@@ -40,7 +40,7 @@
                                 <div class="product-meta-data">
                                     <div class="line"></div>
                                     <p class="product-price">{{$elem->price}}</p>
-                                    <a href="#">
+                                    <a href={{ route('product.add',['id' => $elem ->id] )}}>
                                         <h6>{{$elem->title}}</h6>
                                     </a>
                                 </div>
@@ -68,5 +68,5 @@
             </div>
         </div>
     </div>
-    @include('layouts.footer')  
+    @include('layouts.footer')
     @endsection

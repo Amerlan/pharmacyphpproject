@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class loginsystem extends Model
+class orders extends Model
 {
     //
 }
