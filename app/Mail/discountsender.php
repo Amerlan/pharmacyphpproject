@@ -11,26 +11,18 @@ class discountsender extends Mailable
 {
     use Queueable, SerializesModels;
 
-    /**
-     * Create a new message instance.
-     *
-     * @return void
-     */
-    public function __construct($email)
+
+    public function __construct($token)
     {
-        $this->email = $email;   //принимаем наше мыло и делаем переменную локальной
+        $this->token = $token->token;
     }
 
-    /**
-     * Build the message.
-     *
-     * @return $this
-     */
+
     public function build()
     {
       return $this->view('mails.discount')->   // опять смотри папку views/mail файла discount.blade.php
       with([
-        'email' => $this->email,   // передаем в этот файл мыло
+        'token' => $this->token,
       ])
       ->subject('Welcome to the Family! You followed for updates');   // Тема письма
     }

@@ -16,11 +16,7 @@ use Illuminate\Support\Facades\Http;
 
 class ShopController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
         $data = books::paginate(5);

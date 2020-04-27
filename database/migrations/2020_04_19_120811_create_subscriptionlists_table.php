@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Str;
 
 class CreateSubscriptionlistsTable extends Migration
 {
@@ -16,6 +17,7 @@ class CreateSubscriptionlistsTable extends Migration
         Schema::create('subscriptionlists', function (Blueprint $table) {
             $table->string('email')->primary();
             $table->boolean('notify')->default(1);
+            $table->string('token');
             $table->timestamps();
         });
     }

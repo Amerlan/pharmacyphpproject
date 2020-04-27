@@ -16,9 +16,10 @@ class new_notification extends Mailable
      *
      * @return void
      */
-    public function __construct($data)
+    public function __construct($data, $token)
     {
         $this->data = $data;
+        $this->token = $token;
     }
 
     /**
@@ -31,6 +32,7 @@ class new_notification extends Mailable
        return $this->view('mails.notification')->   // смотри папку views/mail файла notification.blade.php
        with([
          'product' => $this->data,
+         'token' =>$this->token,
        ])
        ->subject('HO-HO-HO. We have something interesting for YOU');   // Тема письма
      }

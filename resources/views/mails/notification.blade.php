@@ -48,4 +48,5 @@
         </div>
     </div>
 </div>
+<span><a href ={{ route( 'unsub', [ 'token' => $token]) }}> Unsubscribe </a></span>
 @endsection

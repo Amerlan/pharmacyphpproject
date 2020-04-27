@@ -19,6 +19,10 @@ Route::get('/order', function(){
   return abort(404);
 });
 
+Route::get('unsubscribe/{token}', [
+  'uses' => 'mailcontroller@unsubscribe',
+   'as' => 'unsub']);
+#Route::post('unsubscribe/{token}', 'mailcontroller@unsubscribe');
 
 Route::post('/order', [
   'uses' => 'ShopController@placeOrder',
@@ -55,7 +59,7 @@ function()
 Route::group(['middleware' => ['auth', 'customer'] ],
 function()
 {
-  Route::post('/senddiscount', "mailcontroller@discount");
+  Route::post('/senddiscount', "mailcontroller@subscribe");
   Route::get('/success', function ()
   {
     return view('success');
