@@ -41,8 +41,13 @@ class ShopController extends Controller
     {
         $url = "https://api.post.kz/api/byOldPostcode/".strval($request->postcode)."?from=0";
         $response = Http::get($url);
+        $temp = 0;
         try {
-            $info = $response->json()['data'][0]['address'];
+            $info = $response->json()['data'][$temp]['address'];
+            while ($info===''){
+                $temp += 1;
+                $info = $response->json()['data'][$temp]['address'];
+            }
         } catch (\Exception $e) {
           $info = 'Post code error';
         }
@@ -89,6 +94,7 @@ class ShopController extends Controller
       $request->session()->put('cart',$cart);
       return redirect()->back();
     }
+
     public function delete(Request $request, $id)
     {
       $item = books::find($id);
