@@ -12,30 +12,25 @@ class senderclass extends Mailable
 {
     use Queueable, SerializesModels;
 
-    /**
-     * Create a new message instance.
-     *THIS CLASS WAS CREATED FOR TEST но может мы его еще используем
-     * @return void
-     */
+
      // Принимаем мыло которое передали
-    public function __construct($email)
+    public function __construct($orderinfo, $cart)
     {
-        $this->email = $email;
+      $this->cart = $cart;
+      $this->checkout = $orderinfo;
     }
 
-    /**
-     * Build the message.
-     *
-     * @return $this
-     */
+
     public function build()
     {
       // Тут мы передаем на нашу вьюшку (смотри папку views/mail)  наше мыло
       // templatemail получает наш емейл.
-        return $this->view('mails.templatemail')-> // Это тело письма (содержание)
+
+        return $this->view('mails.buymail')-> // Это тело письма (содержание)
         with([
-          'email' => $this->email,
-        ])
-        ->subject('New letter'); // Это тема письма
+          'cart' => $this->cart,
+          'checkinfo' => $this->checkout,
+          ])
+        ->subject('Order confirmation. Your order number is '.$this->checkout['id']); // Это тема письма
     }
 }

@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Mail;
 use Illuminate\Http\Request;
 use App\books;
+use App\Mail\new_notification;
+use App\subscriptionlist;
 class bookaddcontroller extends Controller
 {
     /**
@@ -16,11 +18,16 @@ class bookaddcontroller extends Controller
         return view('additem');   // прогружаем страницу с формой добавления книги
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function notify_all()
+    {
+      // , ['verified', 1]
+      $emails = subscriptionlist::where('notify', 1)->get();
+      $book = books::all()->take(-1);
+      foreach ($emails as $email) {
+          Mail::to($email)->send(new new_notification($book));
+        }
+    }
+
     public function create()
     {
         //
@@ -38,8 +45,11 @@ class bookaddcontroller extends Controller
     $books->title = $request->title;
     $books->author = $request->author;
     $books->url = $request->url;
+    $books->source = $request->source;
     $books->price = $request->price;
     $books->save();
+    $this->notify_all();
+
     return redirect('shop');
 
     }

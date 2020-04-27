@@ -43,6 +43,11 @@
             <br>
             {{Form::text('url')}}
           </div>
+          <div class="form_group">
+            <label>Digital version of book</label>
+            <br>
+            {{Form::text('source')}}
+          </div>
             <div class="form_group">
             <label>Price</label>
             <br>

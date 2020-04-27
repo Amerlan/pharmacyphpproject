@@ -3,7 +3,10 @@ use GuzzleHttp\Client;
 namespace App\Http\Controllers;
 use App\books;
 use App\cart;
+use App\subscriptionlist;
 use App\orders;
+use Mail;
+use App\Mail\senderclass;
 use Illuminate\Http\Request;
 use Session;
 use Illuminate\Support\Facades\Auth;
@@ -68,9 +71,12 @@ class ShopController extends Controller
         $order->comment = $request->comment;
 
         $order->save();
-        $data = orders::where('customer_id', Auth::user()->id)->orderBy('id', 'desc')->first();
+        $orderinfo = orders::where('customer_id', Auth::user()->id)->orderBy('id', 'desc')->first(['id','fname','bill']);
+
+        Mail::to(Auth::user()->email)->send(new senderclass($orderinfo, $cart->items));
+
         Session::forget('cart');
-        return view('/confirm', ['data'=>$data, 'response'=>$info]);
+        return view('/confirm', ['data'=>$orderinfo, 'response'=>$info]);
     }
 
     public function edit($id)
@@ -92,6 +98,8 @@ class ShopController extends Controller
       $cart->add($item, $item->id);
 
       $request->session()->put('cart',$cart);
+
+
       return redirect()->back();
     }
 
@@ -126,6 +134,7 @@ class ShopController extends Controller
 
         $oldcart = Session::get('cart');
         $cart = new cart($oldcart);
+
         return view('checkout',['products' => $cart->items, 'totalprice' =>$cart->totalprice]);
     }
 

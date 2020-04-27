@@ -19,6 +19,7 @@ Route::get('/order', function(){
   return abort(404);
 });
 
+
 Route::post('/order', [
   'uses' => 'ShopController@placeOrder',
   'as' => 'order'
@@ -42,6 +43,7 @@ Route::get('checkout', [
   'uses' => 'ShopController@checkout',
   'as' => 'checkout'
 ]);
+
 
 Route::group(['middleware' => ['auth', 'admin'] ],
 function()
