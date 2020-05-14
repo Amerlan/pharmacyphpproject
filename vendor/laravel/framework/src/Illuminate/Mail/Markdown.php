@@ -107,7 +107,7 @@ class Markdown
         $converter = new CommonMarkConverter([
             'allow_unsafe_links' => false,
         ], $environment);
-
+        
         return new HtmlString($converter->convertToHtml($text));
     }
 

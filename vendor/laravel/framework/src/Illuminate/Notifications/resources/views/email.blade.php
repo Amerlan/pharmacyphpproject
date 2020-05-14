@@ -15,10 +15,10 @@
 {{ $line }}
 
 @endforeach
-
 {{-- Action Button --}}
 @isset($actionText)
 <?php
+$url = str_replace('localhost', '127.0.0.1:8000', $actionUrl);
     switch ($level) {
         case 'success':
         case 'error':
@@ -55,8 +55,8 @@
     'into your web browser: [:displayableActionUrl](:actionURL)',
     [
         'actionText' => $actionText,
-        'actionURL' => $actionUrl,
-        'displayableActionUrl' => $displayableActionUrl,
+        'actionURL' => $url,
+        'displayableActionUrl' => $url,
     ]
 )
 @endslot

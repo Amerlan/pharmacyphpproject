@@ -12,10 +12,11 @@
             <!-- Newsletter Form -->
             <div class="col-12 col-lg-6 col-xl-5" id = 'discount'>
                 <div class="newsletter-form mb-100">
-                  {!! Form::open(['url' => 'senddiscount']) !!}  <!--тут мы переходим на senddiscount ссылку при нажатии сабмит-->
-                  {{Form::text('email')}}
-                  {{Form::submit('submit')}}
-                  {!! Form::close() !!}
+                  <form action="{{route('discount')}}" method="post">
+                    @csrf
+                      <input type="email" name="email" class="nl-email" placeholder="Your E-mail">
+                      <input type="submit" value="Subscribe">
+                  </form>
                 </div>
             </div>
         </div>

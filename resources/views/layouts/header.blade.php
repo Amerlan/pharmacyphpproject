@@ -10,13 +10,15 @@
     <!-- Amado Nav -->
     <nav class="amado-nav">
         <ul>
-            <li><a href="home">Home</a></li>
-            <li><a href="shop">Shop</a></li>
+            <li class ={{ URL::current() == 'http://127.0.0.1:8000/home' ? 'active' : ''}}><a href="home">Home</a></li>
+            <li class ={{ URL::current() == 'http://127.0.0.1:8000/shop' ? 'active' : ''}}><a href="shop">Shop</a></li>
+            @if (!Auth::guest())
             @if (Auth::user()->role['slug']=='admin')
-            <li><a href="add">Add items</a></li>
+            <li class ={{ URL::current() == 'http://127.0.0.1:8000/add' ? 'active' : ''}}><a href="add">Add items</a></li>
             @endif
-            <li><a href={{ route('product.shoppingcart') }}>Cart</a></li>
-            <li><a href="checkout">Checkout</a></li>
+            @endif
+            <li class ={{ URL::current() == 'http://127.0.0.1:8000/cart' ? 'active' : ''}}><a href={{ route('product.shoppingcart') }}>Cart</a></li>
+            <li class ={{ URL::current() == 'http://127.0.0.1:8000/checkout' ? 'active' : ''}}><a href="checkout">Checkout</a></li>
         </ul>
     </nav>
     <!-- Button Group -->
@@ -24,13 +26,5 @@
         <a href="#discount" class="btn amado-btn mb-15">% Discount %</a>
     </div>
     <!-- Cart Menu -->
-    <div class="cart-fav-search mb-100">
-        <a href="cart" class="cart-nav">
-          <img src="https://sun9-40.userapi.com/c857636/v857636045/1bd091/QRA00czx00Q.jpg" alt="">
-           Cart
-           <span>
-              ({{ Session::has('cart') ? Session::get('cart')->totalqty : '0'}})
-           </span>
-         </a>
-    </div>
+
 </header>

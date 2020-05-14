@@ -3,10 +3,6 @@ $temp = explode(", ",strval($response));
  ?>
 @extends('layouts.app')
 @section('content')
-<div class="main-content-wrapper d-flex clearfix">
-
-    @include('layouts.header')
-    <!-- Header Area End -->
 
     <div class="cart-table-area section-padding-100">
         <div class="container-fluid">
@@ -28,7 +24,7 @@ $temp = explode(", ",strval($response));
                     <div class="cart-summary">
                         <h5>Cart Total</h5>
                         <ul class="summary-table">
-                            <li><span>total:</span> <span>{{$data['bill']}}</span></li>
+                            <li><span>total:</span> <span>{{$data['bill']}}$</span></li>
                         </ul>
 
                     </div>
@@ -36,6 +32,5 @@ $temp = explode(", ",strval($response));
             </div>
         </div>
     </div>
-  </div>
-@include('layouts.footer')
+
 @endsection

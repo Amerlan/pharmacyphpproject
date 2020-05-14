@@ -1,10 +1,8 @@
 @extends('layouts.app')
 @section('content')
     <!-- ##### Main Content Wrapper Start ##### -->
-    <div class="main-content-wrapper d-flex clearfix">
+
         <!-- Header Area Start -->
-        @include('layouts.header')
-        <!-- Header Area End -->
 
         <div class="amado_product_area section-padding-100">
             <div class="container-fluid">
@@ -22,38 +20,79 @@
                                 <p>Showing 0 out of 0</p>
                             </div>
                             @endif
+                            <div class="product-sorting d-flex">
+                                <div class="view-product d-flex align-items-center">
+                                  <span>View</span>
+                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                            {{$select}} <span class="caret"></span>
+                                        </a>
+
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="{{ route('shop') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('mysub').value = 6;
+                                                     document.getElementById('view').submit();">
+                                                  6
+                                            </a>
+
+                                            <a class="dropdown-item" href="{{ route('shop') }}"
+                                               onclick="event.preventDefault();
+                                               document.getElementById('mysub').value = 8;
+                                                             document.getElementById('view').submit();">
+                                                  8
+                                            </a>
+
+                                            <a class="dropdown-item" href="{{ route('shop') }}"
+                                               onclick="event.preventDefault();
+                                               document.getElementById('mysub').value = 10;
+                                                             document.getElementById('view').submit();">
+                                                  10
+                                            </a>
+
+                                            <a class="dropdown-item" href="{{ route('shop') }}"
+                                               onclick="event.preventDefault();
+                                               document.getElementById('mysub').value = 12;
+                                              document.getElementById('view').submit();">
+                                                  12
+                                            </a>
+
+                                            <form id="view" action="{{ route('shop')}}" method="post" style="display: none;">
+                                                @csrf
+                                                <input id = 'mysub' type="hidden" name = 'select'/>
+                                            </form>
+                                        </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
-
                     <!-- Single Product Area -->
                     @if (count($data) > 0)
                     @foreach ($data as $elem)
                     <div class="col-12 col-sm-6 col-md-12 col-xl-6">
                         <div class="single-product-wrapper">
                             <!-- Product Image -->
+                            <a href={{ route('product.add',['id' => $elem ->id] )}} style="text-decoration: none;">
                             <div class="product-img">
                                 <img src={{$elem->url}} alt="">
-                                <!-- Hover Thumb -->
-                                <img class="hover-img" src={{$elem->url}} alt="">
                             </div>
 
                             <!-- Product Description -->
                             <div class="product-description d-flex align-items-center justify-content-between">
-                                <p>{{$elem->author}}</p>
                                 <div class="product-meta-data">
                                     <div class="line"></div>
-                                    <p class="product-price">{{$elem->price}}</p>
-                                    <a href={{ route('product.add',['id' => $elem ->id] )}}>
-                                        <h6>{{$elem->title}}</h6>
+                                    <h5>{{$elem->author}}</h5>
+                                    <h6>{{$elem->title}}</h6>
+                                    <p class="product-price">{{$elem->price}}$</p>
                                     </a>
                                 </div>
                                 <!-- Ratings & Cart -->
-                                <div class="ratings-cart text-right">
+                                <div class="ratings-cart">
                                     <div class="cart">
-                                        <a href="cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
+                                        <a href="{{ route('product.add',['id' => $elem ->id] )}}" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="{{asset('images/cart.png')}}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -79,6 +118,4 @@
 
             </div>
         </div>
-    </div>
-    @include('layouts.footer')
     @endsection

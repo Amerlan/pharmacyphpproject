@@ -7,6 +7,7 @@ use App\subscriptionlist;
 use App\orders;
 use Mail;
 use App\Mail\senderclass;
+use App\Mail\sendInvoice;
 use Illuminate\Http\Request;
 use Session;
 use Illuminate\Support\Facades\Auth;
@@ -16,29 +17,39 @@ use Illuminate\Support\Facades\Http;
 
 class ShopController extends Controller
 {
-    
+  public function __construct()
+  {
+    $this->middleware('auth');
+  }
+
     public function index()
     {
-        $data = books::paginate(5);
+        $data = books::paginate(6);
 
-        return view('/shop',compact('data'));
+        return view('/shop',['data' =>$data, 'select' => 6]);
     }
 
-    public function create()
+    public function show(Request $req)
     {
-        //
+
+      $data = books::paginate($req->select);
+      $select = $req->select;
+      return view('/shop',['data' => $data, 'select' => $select]);
     }
 
 
     public function store(Request $request)
     {
-        //напиши сюда добавление в бд using admin
+      $req = $request;
+
+        return view('payment',compact('req'));
     }
 
 
     public function placeOrder(Request $request)
     {
-        $url = "https://api.post.kz/api/byOldPostcode/".strval($request->postcode)."?from=0";
+
+        $url = "https://api.post.kz/api/byOldPostcode/".strval($request->post)."?from=0";
         $response = Http::get($url);
         $temp = 0;
         try {
@@ -61,30 +72,21 @@ class ShopController extends Controller
         $order->lname = $request->lname;
         $order->email = Auth::user()->email;
         $order->address = $request->address;
-        $order->postcode = $request->postcode;
+        $order->postcode = $request->post;
         $order->bill = $cart->totalprice;
-        $order->phone_number = $request->phone_number;
-        $order->comment = $request->comment;
+        $order->phone_number = $request->phone;
+        $order->comment = $request->comm;
 
         $order->save();
-        $orderinfo = orders::where('customer_id', Auth::user()->id)->orderBy('id', 'desc')->first(['id','fname','bill']);
+        $orderinfo = orders::where('customer_id', Auth::user()->id)->orderBy('id', 'desc')->first(['id','fname','lname','address','bill']);
 
         Mail::to(Auth::user()->email)->send(new senderclass($orderinfo, $cart->items));
+        Mail::to(Auth::user()->email)->send(new sendInvoice($orderinfo, $cart->items, $request->card));
 
         Session::forget('cart');
         return view('/confirm', ['data'=>$orderinfo, 'response'=>$info]);
     }
 
-    public function edit($id)
-    {
-        // edit data using admin
-    }
-
-     //ADD TO CART FUNCTION
-    public function update(Request $request, $id)
-    {
-      // update bd books using admin
-    }
 
     public function addToCart(Request $request, $id)
     {

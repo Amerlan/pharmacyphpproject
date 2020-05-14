@@ -19,7 +19,7 @@ class CreateOrdersTable extends Migration
             $table->string('postcode');
             $table->integer('bill');
             $table->string('phone_number');
-            $table->string('comment');
+            $table->string('comment')->nullable();
             $table->timestamps();
         });
     }
