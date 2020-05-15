@@ -1,3 +1,7 @@
+<?php
+$searchfill = $data[rand(0,5)]->title ?? '';
+$stat = $status ?? 0;
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +16,8 @@
     <title>ReadHome</title>
 
     <!-- Favicon  -->
-    <link rel="icon" href="{{asset('images/fav.ico')}}">
+
+    <link rel="shortcut icon" href="{{asset('images/icon.png')}}" type="image/png">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -29,14 +34,27 @@
 </head>
 
 <body>
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+@if ($stat === 1)
+<script>swal("You already subscribed!");</script>
+@endif
+@if ($stat ===2)
+<script>
+swal({
+  title: "Check the email!",
+  icon: "success",
+  button: "Let's shopping!",
+});
+</script>
+@endif
   <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
       <div class="container">
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div id = 'search'>
-              <form action="#" method="get">
-                <input id = 'searchcss' type="search" name="search" placeholder="Type your keyword...">
+              <form action="{{ route('search')}}" method="post">
+                @csrf
+                <input id = 'searchcss' type="search" name="search" placeholder="{{$searchfill}}">
                 <button id = 'searchcss' type="submit">Search</button>
               </form>
             </div>
@@ -197,6 +215,8 @@
                 </div>
             </div>
         </div>
+<div class="">
+</div>
     </footer>
     <!-- ##### Footer Area End ##### -->
     <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>

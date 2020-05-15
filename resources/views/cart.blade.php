@@ -60,6 +60,9 @@
 
                     </div>
                 </div>
+                @if($products)
+                <a href={{ route('clear')}}><span class="iconify" data-icon="whh:trashempty" data-inline="false" data-width="24" data-height="24"></span></a>
+                @endif
             </div>
         </div>
     </div>

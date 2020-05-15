@@ -10,12 +10,16 @@ use App\Http\Controllers\mailcontroller;
 */
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', function()
+{
+  return redirect('/home');
+});
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/shop', "ShopController@index");
+Route::get('/shop', ['uses' => "ShopController@index", 'as' => 'shop']);
 Route::post('/shop', ['uses'=>"ShopController@show", 'as'=>'shop']);
 
-Route::post('/test', 'ShopController@placeOrder');
+
+Route::get('/clear', ['uses' => 'ShopController@clear', 'as'=> 'clear']);
 
 Route::post('/pay', ['uses'=>'ShopController@store', 'as'=>'store']);
 Route::get('/pay', ['uses'=>'ShopController@store', 'as'=>'store']);
@@ -52,6 +56,7 @@ Route::get('checkout', [
   'as' => 'checkout'
 ]);
 
+Route::post('/shop', ['uses'=> 'ShopController@search', 'as' => 'search']);
 
 Route::group(['middleware' => ['auth', 'admin'] ],
 function()
@@ -65,9 +70,4 @@ function()
 {
   Route::post('/senddiscount', ['uses'=>"mailcontroller@subscribe",
                                 'as' => 'discount']);
-  Route::get('/success', function ()
-  {
-    return view('success');
-  });
-
 });

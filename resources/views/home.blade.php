@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
         <!-- Product Catagories Area Start -->
+
         <div class="products-catagories-area clearfix mt-100">
             <div class="amado-pro-catagory clearfix">
 

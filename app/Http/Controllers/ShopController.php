@@ -136,6 +136,20 @@ class ShopController extends Controller
         return view('checkout',['products' => $cart->items, 'totalprice' =>$cart->totalprice]);
     }
 
+    public function search(Request $req)
+    {
+      $book = books::where('title', 'like', $req->search.'%')
+                    ->orWhere('author', 'like', $req->search.'%')->paginate(5);
+      if (!$req->search) {
+        return $this->index();
+      }
+      return view('shop',['data' =>$book, 'select' => 6]);
+    }
 
+    public function clear()
+    {
+      Session::forget('cart');
+      return redirect()->back();
+    }
 
 }

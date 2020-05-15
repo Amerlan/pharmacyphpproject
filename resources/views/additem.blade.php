@@ -23,6 +23,7 @@
       <label for="owner">Price</label>
       <input name = 'price' type="text" class="form-control" id="owner">
     </div>
+    <button type="submit">Add</button>
 </form>
 </div>
 @endsection

@@ -9,7 +9,7 @@ class HomeController extends Controller
 
     public function index()
     {
-        $data = books::orderBy('id', 'desc')->take(5)->get();
+        $data = books::orderBy('id', 'desc')->take(4)->get();
         return view('home',compact('data'));
     }
 }
