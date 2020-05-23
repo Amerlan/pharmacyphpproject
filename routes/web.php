@@ -56,7 +56,7 @@ Route::get('checkout', [
   'as' => 'checkout'
 ]);
 
-Route::post('/shop', ['uses'=> 'ShopController@search', 'as' => 'search']);
+Route::post('/search', ['uses'=> 'ShopController@search', 'as' => 'search']);
 
 Route::group(['middleware' => ['auth', 'admin'] ],
 function()

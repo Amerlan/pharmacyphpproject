@@ -19,7 +19,9 @@
                     </a>
                 </div>
                 @endforeach
+<br>
               </div>
+
           </div>
         <!-- Product Catagories Area End -->
 @endsection

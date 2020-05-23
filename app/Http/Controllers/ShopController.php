@@ -31,7 +31,6 @@ class ShopController extends Controller
 
     public function show(Request $req)
     {
-
       $data = books::paginate($req->select);
       $select = $req->select;
       return view('/shop',['data' => $data, 'select' => $select]);
