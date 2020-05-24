@@ -79,7 +79,7 @@ class ShopController extends Controller
         $order->save();
         $orderinfo = orders::where('customer_id', Auth::user()->id)->orderBy('id', 'desc')->first(['id','fname','lname','address','bill']);
 
-        Mail::to(Auth::user()->email)->send(new senderclass($orderinfo, $cart->items));
+        Mail::to(Auth::user()->email)->send(new senderclass($orderinfo, $cart->items, $request->fname));
         Mail::to(Auth::user()->email)->send(new sendInvoice($orderinfo, $cart->items, $request->card));
 
         Session::forget('cart');

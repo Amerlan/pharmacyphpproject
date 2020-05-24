@@ -14,10 +14,11 @@ class senderclass extends Mailable
 
 
      // Принимаем мыло которое передали
-    public function __construct($orderinfo, $cart)
+    public function __construct($orderinfo, $cart, $name)
     {
       $this->cart = $cart;
       $this->checkout = $orderinfo;
+      $this->name = $name;
     }
 
 
@@ -30,6 +31,7 @@ class senderclass extends Mailable
         with([
           'cart' => $this->cart,
           'checkinfo' => $this->checkout,
+          'name' =>$this->name,
           ])
         ->subject('Order confirmation. Your order number is '.$this->checkout['id']); // Это тема письма
     }

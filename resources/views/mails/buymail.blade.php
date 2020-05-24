@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-12 col-lg-8">
                     <div class="cart-title mt-50">
-                        <h2>Dear {{$checkinfo->name}}! Your order {{$checkinfo->id}} is ready.</h2>
+                        <h2>Dear {{$name}}! Your order {{$checkinfo->id}} is ready.</h2>
                     </div>
 
                     <div class="cart-table clearfix">
@@ -46,7 +46,7 @@
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="cart-summary">
-                        <h5>Check</h5>
+                        <h5>Invoice will come in next message.</h5>
                         <ul class="summary-table">
                             <li><span>Amount:</span> <span>{{$checkinfo->bill}}</span></li>
                         </ul>
